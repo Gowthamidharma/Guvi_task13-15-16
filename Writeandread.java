@@ -11,6 +11,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
+
+
 public class Writeandread {
 
 	public static void main(String[] args) throws IOException  {
@@ -20,11 +22,15 @@ public class Writeandread {
 		XSSFSheet sheet = book.createSheet("Sheet1");
 		// store the data in the excel sheet
 		Object[][] data = {
-				{"Name","Age", "Email"},
-				{"John Doe","30", "john@test.com"},				
-				{"Jane Doe","28","john@test.com"},
+				{"Name","Age", "Email"}, 								
+				
+				{"John Doe","30", "john@test.com"},	
+				
+				{"Jane Doe","28","jane@test.com"},
+				
 				{"Bob Smith","35","jacky@example.com"},
-				{"Swapnil","37", "swapnil@example.com"}
+				
+				{"Swapnil","37", "swapnil@example.com"},
 				
 		};
 		// give input to the sheet, first get into the row
@@ -34,7 +40,7 @@ public class Writeandread {
 			XSSFRow row = sheet.createRow(rowc++);
 			
 			int col =0;
-		// to get to the columns
+		// to get into the columns
 			
 		for(Object column: row1) {
 			XSSFCell cell =row.createCell(col++);
@@ -55,7 +61,12 @@ public class Writeandread {
 		}
 		try {
 			FileOutputStream outputStream =new FileOutputStream("C:\\Users\\Lishanth\\eclipse-workspace\\MavenJavaproject\\src\\main\\java\\javamavenpackage\\writeread.xlsx");
-		} catch (Exception e) {
+			book.write(outputStream);	
+		
+		}
+		
+		
+		catch (Exception e) {
 			
 			e.printStackTrace();
 		}

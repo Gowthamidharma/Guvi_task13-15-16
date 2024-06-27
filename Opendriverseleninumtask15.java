@@ -1,11 +1,8 @@
 package javamavenpackage;
 
-import java.time.Duration;
 
-import org.apache.commons.math3.optim.nonlinear.scalar.LineSearch;
+import java.time.Duration;
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByName;
-import org.openqa.selenium.By.ByClassName;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
